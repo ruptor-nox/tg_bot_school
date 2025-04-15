@@ -1,4 +1,5 @@
 import logging
+import os 
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.utils import executor
@@ -6,10 +7,8 @@ from aiogram.utils import executor
 
 logging.basicConfig(level=logging.INFO)
 
-
-BOT_TOKEN = '7878801559:AAFPDf68fece92kCSh9yuqbBF0j6IAFlkk8'
-
-ADMIN_ID = 123456789
+BOT_TOKEN = os.getenv("7878801559:AAFPDf68fece92kCSh9yuqbBF0j6IAFlkk8")
+ADMIN_ID = int(os.getenv("123456789"))
 
 
 bot = Bot(token=BOT_TOKEN)
